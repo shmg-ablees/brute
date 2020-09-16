@@ -22,7 +22,7 @@ def main():
         """
   _                _   _____
  | |__  _ __ _   _| |_|___ /
- | "_ \| "__| | | | __| |_ \/
+ |  _ \|  __| | | | __| |_ \/
  | |_) | |  | |_| | |_ ___) |
  |_.__/|_|   \__,_|\__|____/
 
@@ -116,7 +116,12 @@ def main():
         sys.exit(0)
 
     if args.new_module:
-        (modtype, name) = args.new_module.split("/")
+        try:
+            (modtype, name) = args.new_module.split("/")
+        except ValueError:
+            logger.error("[!] New module needs to be in `type/name` formaat [!]")
+            sys.exit(1)
+
         if not modtype in manager.modtypes:
             logger.error(f"Module type `{modtype}` not recognized!")
             sys.exit(1)

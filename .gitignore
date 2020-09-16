@@ -4,6 +4,8 @@
 venv/
 dist/
 build/
+vendor/
 .mypy_cache/
+.jekyll-cache/
 
 *.log
