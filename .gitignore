@@ -1,3 +1,6 @@
 vendor/
+venv/
+brute/
 .jekyll-cache/
+*.egg-info/
 *.cache
