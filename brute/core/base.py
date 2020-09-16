@@ -379,7 +379,12 @@ class BruteBase:
 
             # start a seperate process
             proc = multiprocessing.Process(
-                target=exec_loop, name="brute_exec", args=(self, user,)
+                target=exec_loop,
+                name="brute_exec",
+                args=(
+                    self,
+                    user,
+                ),
             )
             proc.start()
 
