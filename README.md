@@ -40,7 +40,7 @@ You can use __brute__ to:
 To use `brute`, you can either install through `pip`:
 
 ```
-$ pip install brute --user
+$ pip install brute-engine --user
 ```
 
 or build locally:
